@@ -2,8 +2,8 @@ import pygame
 from pygame.constants import QUIT
 
 pygame.init()
-lar = 640
-alt = 480
+lar = 1200
+alt = 700
 x = lar / 2
 y = 0
 
@@ -19,9 +19,13 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             exit()
-    pygame.draw.rect(tela, (255,0,0), (x, y, 40, 50))
+    pygame.draw.rect(tela, (255,120,200), (x, y, 120, 120))
     if y >= alt:
         y = 0
     y += 3
+    pygame.draw.circle(tela, (137,120,98), (x + 360, y), 85)
+    if y >= alt:
+        y = 0
+    y += 6
 
     pygame.display.update()

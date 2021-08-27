@@ -1,0 +1,7 @@
+Estevam; 42
+Silvia; 37
+Giovana; 11 meses
+Paula; 37
+Roberta; 40
+Bia; 14
+Eduardo; 17

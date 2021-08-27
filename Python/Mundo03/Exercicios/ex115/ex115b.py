@@ -1,18 +1,17 @@
 from lib.interface.menu import *
-from lib.arquivo.arquivo import *
+from lib.arquivo.archive import *
 from time import sleep
 
 arq = 'Cursoemvideo.txt'
 
-if arquivoExiste(arq):
-    print('Arquivo encontrado com sucesso!')
-else:
-    print('Arquivo não existe')
+if not arquivoExiste(arq):
+    criarArquivo(arq)
 
 while True:
     resposta = menu(['Ver pessoas cadastradas', 'Cadastrar nova Pessoa', 'Sair do Sistema'])
     if resposta == 1:
-        cabecalho('Opção 1')
+        # Opção de listar o conteudo de um arquivo!
+        lerArquivo(arq)
     elif resposta == 2:
         cabecalho('Opção 2')
     elif resposta == 3:
